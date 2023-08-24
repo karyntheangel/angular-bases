@@ -1,0 +1,16 @@
+<div class="text-white">
+  <h3>Listado de heroes</h3>
+
+  <h4 id="activity" class="invisible">No ha borrado heroes</h4>
+  <h4 id="activityB" class=" invisible">
+    Heroe borrado
+    <small class="text-danger">{{deletedName}}</small>
+  </h4>
+  <ul class="my-1 list-group">
+    <li class="list-group-item"
+    *ngFor="let name of heroNames">
+    {{name}}
+    </li>
+  </ul>
+  <button id="btnRemove" (click)="deleteLast()" class="btn btn-danger">Borrar ultimo heroe</button>
+</div>
